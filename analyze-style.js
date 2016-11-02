@@ -35,7 +35,7 @@ function count_color_model(color_model){
             if (color_model[key].length == 3) { color_model[key].push(1) } // add alpha if not present
             var channels = color_model[key].length;
             for (var w = 0; w < channels; w++) {
-               color_model[key][w] = parseFloat(color_model[key][w]);
+                color_model[key][w] = parseFloat(color_model[key][w]);
             }
 
             color_model[key] = color_model[key].join(",")
@@ -76,9 +76,6 @@ unique_sizes = []
 
 
 
-
-
-
 function count_font_model(font_model){
 
     // Count species
@@ -104,9 +101,6 @@ function count_font_model(font_model){
     }
 }
 
-
-
-    
 
 
 var elements = document.querySelectorAll("*");
@@ -145,7 +139,6 @@ function just_values(model) {
 }
 
 
-// font_fields = ["font-size", "font-family", "text-align", "line-height"]
 
 function breakdown(model) {
     counts = {}
@@ -154,18 +147,20 @@ function breakdown(model) {
             if (model[i].hasOwnProperty(key)) {
                
                 if (model[i][key] in counts) {
-                  counts[model[i][key]] = counts[model[i][key]] + 1
+                    counts[model[i][key]] = counts[model[i][key]] + 1
                 } else {
-                  counts[model[i][key]] = 1
+                    counts[model[i][key]] = 1
                 }
                 
-
             }
         }
 
     }
     return counts;
 }
+
+unique_sizes.sort()
+unique_colors.sort()
 
 
 console.log("COLORS");
@@ -180,3 +175,5 @@ console.log(breakdown(just_values(font_species)));
 console.log(font_species.length);
 console.log(unique_sizes);
 console.log(unique_sizes.length)
+
+return color_species
