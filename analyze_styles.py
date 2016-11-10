@@ -162,9 +162,9 @@ def is_display_static_meaningful(elements):
                 statics.append(el)
                 break
 
-        if not found_display:
-            pprint.pprint(el["style"])
-    pprint.pprint(displays)
+    #     if not found_display:
+    #         pprint.pprint(el["style"])
+    # pprint.pprint(displays)
 
     meaningful_static_count = 0
     statics_considered = len(statics)
@@ -217,11 +217,95 @@ def is_display_static_meaningful(elements):
 
 
 
+def font_palette(elements):
+
+    fonts = []
+
+    for el in elements:
+        font = { "family" : None
+               , "size" : None
+               , "weight" : False
+               , "italic" : False
+               , "line-height" : None
+               }
+
+        for name, val in el["style"].items():
+            if name == "font-family":
+                font["family"] = ", ".join(sorted(val.lower().split(", ")))
+            elif name == "font-size":
+                font["size"] = val
+            elif name == "font-weight":
+                font["weight"] = val
+            elif name == "line-height":
+                font["line-height"] = val
+            elif name == "font-style" and (val == "italic" or val == "oblique"):
+                font["italic"] = True
+        fonts.append(font)
+
+
+    overview = {}
+    for font in fonts:
+        if font["family"] in overview:
+            counted = False
+            # print overview
+            for permutation in overview[font["family"]]:
+                if permutation["style"] == font:
+                    permutation["count"] = permutation["count"] + 1
+                    counted = True
+                    break
+
+            if not counted:
+                 overview[font["family"]].append({"style" : font, "count" : 1 })
+                
+
+        else:
+            overview[font["family"]] = [{"style" : font, "count" : 1 }]
+
+
+    unique_sizes = {}
+    for name, permutations in overview.items():
+        for perm in permutations:
+            if (perm["style"]["size"], perm["style"]["line-height"]) in unique_sizes:
+                unique_sizes[(perm["style"]["size"], perm["style"]["line-height"])] = unique_sizes[(perm["style"]["size"], perm["style"]["line-height"])] + 1
+            else:
+                unique_sizes[(perm["style"]["size"], perm["style"]["line-height"])] = 1
+
+    pprint.pprint(len(overview.keys()))
+    pprint.pprint(unique_sizes)
+
+
+
+def is_display_inline_meaningful(elements):
+    total = 0
+    meaningful_count = 0
+    for el in elements:
+        if el["node"] == "svg" or el["node"] == "img" or el["node"] == "iframe":
+            continue
+        inline = False
+        widthOrHeight = False
+        for name, val in el["style"].items():
+            if name == "display" and val == "inline":
+                inline = True
+        for name, val in el["style"].items():
+            if name in ("width", "height") and val != "auto" and inline:
+                # print val
+                print "<" + el["node"] + " ." + str(el["classes"]) + " " + name + ":" + str(val) + ">"
+                widthOrHeight = True
+        if inline and widthOrHeight:
+            meaningful_count = meaningful_count + 1
+
+    print meaningful_count
+
+
+
+
+
+
 
 if __name__ == "__main__":
     sites = []
     with open("sites") as SITES:
-        sites = [s for s in SITES.read().split("\n") if s != ""]
+        sites = [s for s in SITES.read().split("\n") if s != "" and not s.startswith("#")]
 
     browser = webdriver.Chrome()
     # try:
@@ -233,6 +317,9 @@ if __name__ == "__main__":
         # print color_palette(data["elements"])
         # print do_children_share_same_margin(data["elements"])
         # is_display_static_meaningful(data["elements"])
+        # font_palette(data["elements"])
+
+        is_display_inline_meaningful(data["elements"])
         print ""
         print ""
 
