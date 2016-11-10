@@ -9,13 +9,13 @@ Things to Test for
         * how many font sizes
         * how many unique font styles (font-family + font-size + font-weight + font-style)
 
- [ ] - Color
+ [x] - Color
         * How many colors are used?  Is there a common palette of greys?
 
- [ ] - Box model
+ [x] - Box model
         * Do all children generally shar the same margin values?
 
- [ ] - Is display static ever used meaningfully?  In otherwords, can it be interchanged with display:relative 0,0?
+ [x] - Is position static ever used meaningfully?  In otherwords, can it be interchanged with position:relative 0,0?
         (screenshot before and after)
 
  [ ] - Total collection of css properties used.
