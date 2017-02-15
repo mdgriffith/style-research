@@ -1,0 +1,3116 @@
+[
+  {
+    "url": "/en-US/docs/Web/CSS/:active", 
+    "documented": true, 
+    "type": "pseudo-element", 
+    "name": ":active"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@counter-style/additive-symbols", 
+    "documented": true, 
+    "type": "property", 
+    "name": "additive-symbols (@counter-style)"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/::after", 
+    "documented": true, 
+    "type": "pseudo-element", 
+    "name": "::after (:after)"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/align-content", 
+    "documented": true, 
+    "type": "property", 
+    "name": "align-content"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/align-items", 
+    "documented": true, 
+    "type": "property", 
+    "name": "align-items"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/align-self", 
+    "documented": true, 
+    "type": "property", 
+    "name": "align-self"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/all", 
+    "documented": true, 
+    "type": "property", 
+    "name": "all"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/angle", 
+    "documented": true, 
+    "type": "unit", 
+    "name": "<angle>"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/animation", 
+    "documented": true, 
+    "type": "property", 
+    "name": "animation"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/animation-delay", 
+    "documented": true, 
+    "type": "property", 
+    "name": "animation-delay"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/animation-direction", 
+    "documented": true, 
+    "type": "property", 
+    "name": "animation-direction"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/animation-duration", 
+    "documented": true, 
+    "type": "property", 
+    "name": "animation-duration"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/animation-fill-mode", 
+    "documented": true, 
+    "type": "property", 
+    "name": "animation-fill-mode"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/animation-iteration-count", 
+    "documented": true, 
+    "type": "property", 
+    "name": "animation-iteration-count"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/animation-name", 
+    "documented": true, 
+    "type": "property", 
+    "name": "animation-name"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/animation-play-state", 
+    "documented": true, 
+    "type": "property", 
+    "name": "animation-play-state"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/animation-timing-function", 
+    "documented": true, 
+    "type": "property", 
+    "name": "animation-timing-function"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@font-feature-values#@annotation", 
+    "documented": true, 
+    "type": "at-rule", 
+    "name": "@annotation"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/font-variant-alternates#annotation()", 
+    "documented": true, 
+    "type": "function", 
+    "name": "annotation()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/attr", 
+    "documented": true, 
+    "type": "function", 
+    "name": "attr()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/::backdrop", 
+    "documented": true, 
+    "type": "pseudo-element", 
+    "name": "::backdrop"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/backface-visibility", 
+    "documented": true, 
+    "type": "property", 
+    "name": "backface-visibility"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/background", 
+    "documented": true, 
+    "type": "property", 
+    "name": "background"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/background-attachment", 
+    "documented": true, 
+    "type": "property", 
+    "name": "background-attachment"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/background-blend-mode", 
+    "documented": true, 
+    "type": "property", 
+    "name": "background-blend-mode"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/background-clip", 
+    "documented": true, 
+    "type": "property", 
+    "name": "background-clip"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/background-color", 
+    "documented": true, 
+    "type": "property", 
+    "name": "background-color"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/background-image", 
+    "documented": true, 
+    "type": "property", 
+    "name": "background-image"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/background-origin", 
+    "documented": true, 
+    "type": "property", 
+    "name": "background-origin"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/background-position", 
+    "documented": true, 
+    "type": "property", 
+    "name": "background-position"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/background-repeat", 
+    "documented": true, 
+    "type": "property", 
+    "name": "background-repeat"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/background-size", 
+    "documented": true, 
+    "type": "property", 
+    "name": "background-size"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/basic-shape", 
+    "documented": true, 
+    "type": "unit", 
+    "name": "<basic-shape>"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/::before", 
+    "documented": true, 
+    "type": "pseudo-element", 
+    "name": "::before (:before)"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/blend-mode", 
+    "documented": true, 
+    "type": "unit", 
+    "name": "<blend-mode>"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/block-size", 
+    "documented": true, 
+    "type": "property", 
+    "name": "block-size"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/filter#blur()", 
+    "documented": true, 
+    "type": "function", 
+    "name": "blur()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/border", 
+    "documented": true, 
+    "type": "property", 
+    "name": "border"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/border-block-end", 
+    "documented": true, 
+    "type": "property", 
+    "name": "border-block-end"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/border-block-end-color", 
+    "documented": true, 
+    "type": "property", 
+    "name": "border-block-end-color"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/border-block-end-style", 
+    "documented": true, 
+    "type": "property", 
+    "name": "border-block-end-style"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/border-block-end-width", 
+    "documented": true, 
+    "type": "property", 
+    "name": "border-block-end-width"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/border-block-start", 
+    "documented": true, 
+    "type": "property", 
+    "name": "border-block-start"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/border-block-start-color", 
+    "documented": true, 
+    "type": "property", 
+    "name": "border-block-start-color"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/border-block-start-style", 
+    "documented": true, 
+    "type": "property", 
+    "name": "border-block-start-style"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/border-block-start-width", 
+    "documented": true, 
+    "type": "property", 
+    "name": "border-block-start-width"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/border-bottom", 
+    "documented": true, 
+    "type": "property", 
+    "name": "border-bottom"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/border-bottom-color", 
+    "documented": true, 
+    "type": "property", 
+    "name": "border-bottom-color"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/border-bottom-left-radius", 
+    "documented": true, 
+    "type": "property", 
+    "name": "border-bottom-left-radius"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/border-bottom-right-radius", 
+    "documented": true, 
+    "type": "property", 
+    "name": "border-bottom-right-radius"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/border-bottom-style", 
+    "documented": true, 
+    "type": "property", 
+    "name": "border-bottom-style"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/border-bottom-width", 
+    "documented": true, 
+    "type": "property", 
+    "name": "border-bottom-width"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/border-collapse", 
+    "documented": true, 
+    "type": "property", 
+    "name": "border-collapse"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/border-color", 
+    "documented": true, 
+    "type": "property", 
+    "name": "border-color"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/border-image", 
+    "documented": true, 
+    "type": "property", 
+    "name": "border-image"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/border-image-outset", 
+    "documented": true, 
+    "type": "property", 
+    "name": "border-image-outset"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/border-image-repeat", 
+    "documented": true, 
+    "type": "property", 
+    "name": "border-image-repeat"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/border-image-slice", 
+    "documented": true, 
+    "type": "property", 
+    "name": "border-image-slice"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/border-image-source", 
+    "documented": true, 
+    "type": "property", 
+    "name": "border-image-source"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/border-image-width", 
+    "documented": true, 
+    "type": "property", 
+    "name": "border-image-width"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/border-inline-end", 
+    "documented": true, 
+    "type": "property", 
+    "name": "border-inline-end"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/border-inline-end-color", 
+    "documented": true, 
+    "type": "property", 
+    "name": "border-inline-end-color"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/border-inline-end-style", 
+    "documented": true, 
+    "type": "property", 
+    "name": "border-inline-end-style"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/border-inline-end-width", 
+    "documented": true, 
+    "type": "property", 
+    "name": "border-inline-end-width"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/border-inline-start", 
+    "documented": true, 
+    "type": "property", 
+    "name": "border-inline-start"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/border-inline-start-color", 
+    "documented": true, 
+    "type": "property", 
+    "name": "border-inline-start-color"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/border-inline-start-style", 
+    "documented": true, 
+    "type": "property", 
+    "name": "border-inline-start-style"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/border-inline-start-width", 
+    "documented": true, 
+    "type": "property", 
+    "name": "border-inline-start-width"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/border-left", 
+    "documented": true, 
+    "type": "property", 
+    "name": "border-left"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/border-left-color", 
+    "documented": true, 
+    "type": "property", 
+    "name": "border-left-color"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/border-left-style", 
+    "documented": true, 
+    "type": "property", 
+    "name": "border-left-style"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/border-left-width", 
+    "documented": true, 
+    "type": "property", 
+    "name": "border-left-width"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/border-radius", 
+    "documented": true, 
+    "type": "property", 
+    "name": "border-radius"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/border-right", 
+    "documented": true, 
+    "type": "property", 
+    "name": "border-right"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/border-right-color", 
+    "documented": true, 
+    "type": "property", 
+    "name": "border-right-color"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/border-right-style", 
+    "documented": true, 
+    "type": "property", 
+    "name": "border-right-style"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/border-right-width", 
+    "documented": true, 
+    "type": "property", 
+    "name": "border-right-width"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/border-spacing", 
+    "documented": true, 
+    "type": "property", 
+    "name": "border-spacing"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/border-style", 
+    "documented": true, 
+    "type": "property", 
+    "name": "border-style"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/border-top", 
+    "documented": true, 
+    "type": "property", 
+    "name": "border-top"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/border-top-color", 
+    "documented": true, 
+    "type": "property", 
+    "name": "border-top-color"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/border-top-left-radius", 
+    "documented": true, 
+    "type": "property", 
+    "name": "border-top-left-radius"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/border-top-right-radius", 
+    "documented": true, 
+    "type": "property", 
+    "name": "border-top-right-radius"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/border-top-style", 
+    "documented": true, 
+    "type": "property", 
+    "name": "border-top-style"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/border-top-width", 
+    "documented": true, 
+    "type": "property", 
+    "name": "border-top-width"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/border-width", 
+    "documented": true, 
+    "type": "property", 
+    "name": "border-width"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/bottom", 
+    "documented": true, 
+    "type": "property", 
+    "name": "bottom"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@bottom-center", 
+    "documented": true, 
+    "type": "at-rule", 
+    "name": "@bottom-center"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@bottom-left", 
+    "documented": true, 
+    "type": "at-rule", 
+    "name": "@bottom-left"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@bottom-left-corner", 
+    "documented": true, 
+    "type": "at-rule", 
+    "name": "@bottom-left-corner"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@bottom-right", 
+    "documented": true, 
+    "type": "at-rule", 
+    "name": "@bottom-right"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@bottom-right-corner", 
+    "documented": true, 
+    "type": "at-rule", 
+    "name": "@bottom-right-corner"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/box-decoration-break", 
+    "documented": true, 
+    "type": "property", 
+    "name": "box-decoration-break"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/box-shadow", 
+    "documented": true, 
+    "type": "property", 
+    "name": "box-shadow"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/box-sizing", 
+    "documented": true, 
+    "type": "property", 
+    "name": "box-sizing"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/break-after", 
+    "documented": true, 
+    "type": "property", 
+    "name": "break-after"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/break-before", 
+    "documented": true, 
+    "type": "property", 
+    "name": "break-before"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/break-inside", 
+    "documented": true, 
+    "type": "property", 
+    "name": "break-inside"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/filter#brightness()", 
+    "documented": true, 
+    "type": "function", 
+    "name": "brightness()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/calc", 
+    "documented": true, 
+    "type": "function", 
+    "name": "calc()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/caption-side", 
+    "documented": true, 
+    "type": "property", 
+    "name": "caption-side"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/caret-color", 
+    "documented": true, 
+    "type": "property", 
+    "name": "caret-color"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/length#ch", 
+    "documented": true, 
+    "type": "property", 
+    "name": "ch"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@character-variant", 
+    "documented": true, 
+    "type": "at-rule", 
+    "name": "@character-variant"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@font-face/font-variant#character-variant()", 
+    "documented": true, 
+    "type": "function", 
+    "name": "character-variant()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@charset", 
+    "documented": true, 
+    "type": "at-rule", 
+    "name": "@charset"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/:checked", 
+    "documented": true, 
+    "type": "pseudo-element", 
+    "name": ":checked"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/circle", 
+    "documented": true, 
+    "type": "function", 
+    "name": "circle()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/clear", 
+    "documented": true, 
+    "type": "property", 
+    "name": "clear"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/clip", 
+    "documented": true, 
+    "type": "property", 
+    "name": "clip"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/clip-path", 
+    "documented": true, 
+    "type": "property", 
+    "name": "clip-path"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/length#cm", 
+    "documented": true, 
+    "type": "property", 
+    "name": "cm"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/color_value", 
+    "documented": true, 
+    "type": "unit", 
+    "name": "<color>"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/color", 
+    "documented": true, 
+    "type": "property", 
+    "name": "color"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/column-count", 
+    "documented": true, 
+    "type": "property", 
+    "name": "column-count"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/column-fill", 
+    "documented": true, 
+    "type": "property", 
+    "name": "column-fill"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/column-gap", 
+    "documented": true, 
+    "type": "property", 
+    "name": "column-gap"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/column-rule", 
+    "documented": true, 
+    "type": "property", 
+    "name": "column-rule"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/column-rule-color", 
+    "documented": true, 
+    "type": "property", 
+    "name": "column-rule-color"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/column-rule-style", 
+    "documented": true, 
+    "type": "property", 
+    "name": "column-rule-style"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/column-rule-width", 
+    "documented": true, 
+    "type": "property", 
+    "name": "column-rule-width"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/column-span", 
+    "documented": true, 
+    "type": "property", 
+    "name": "column-span"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/column-width", 
+    "documented": true, 
+    "type": "property", 
+    "name": "column-width"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/columns", 
+    "documented": true, 
+    "type": "property", 
+    "name": "columns"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/content", 
+    "documented": true, 
+    "type": "property", 
+    "name": "content"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/filter#contrast()", 
+    "documented": true, 
+    "type": "function", 
+    "name": "contrast()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/counter", 
+    "documented": true, 
+    "type": "unit", 
+    "name": "<counter>"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/counter-increment", 
+    "documented": true, 
+    "type": "property", 
+    "name": "counter-increment"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/counter-reset", 
+    "documented": true, 
+    "type": "property", 
+    "name": "counter-reset"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@counter-style", 
+    "documented": true, 
+    "type": "at-rule", 
+    "name": "@counter-style"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/cross-fade", 
+    "documented": true, 
+    "type": "function", 
+    "name": "cross-fade()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/cubic-bezier", 
+    "documented": true, 
+    "type": "function", 
+    "name": "cubic-bezier()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/cursor", 
+    "documented": true, 
+    "type": "property", 
+    "name": "cursor"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/custom-ident", 
+    "documented": true, 
+    "type": "unit", 
+    "name": "<custom-ident>"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/:default", 
+    "documented": true, 
+    "type": "pseudo-element", 
+    "name": ":default"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/angle#deg", 
+    "documented": true, 
+    "type": "property", 
+    "name": "deg"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/:dir", 
+    "documented": true, 
+    "type": "pseudo-element", 
+    "name": ":dir"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/direction", 
+    "documented": true, 
+    "type": "property", 
+    "name": "direction"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/:disabled", 
+    "documented": true, 
+    "type": "pseudo-element", 
+    "name": ":disabled"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/display", 
+    "documented": true, 
+    "type": "property", 
+    "name": "display"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/resolution#dpcm", 
+    "documented": true, 
+    "type": "property", 
+    "name": "dpcm"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/resolution#dpi", 
+    "documented": true, 
+    "type": "property", 
+    "name": "dpi"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/resolution#dppx", 
+    "documented": true, 
+    "type": "property", 
+    "name": "dppx"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/filter#drop-shadow()", 
+    "documented": true, 
+    "type": "function", 
+    "name": "drop-shadow()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/element", 
+    "documented": true, 
+    "type": "function", 
+    "name": "element()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/ellipse", 
+    "documented": true, 
+    "type": "function", 
+    "name": "ellipse()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/length#em", 
+    "documented": true, 
+    "type": "property", 
+    "name": "em"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/:empty", 
+    "documented": true, 
+    "type": "pseudo-element", 
+    "name": ":empty"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/empty-cells", 
+    "documented": true, 
+    "type": "property", 
+    "name": "empty-cells"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/:enabled", 
+    "documented": true, 
+    "type": "pseudo-element", 
+    "name": ":enabled"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/length#ex", 
+    "documented": true, 
+    "type": "property", 
+    "name": "ex"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@counter-style/fallback", 
+    "documented": true, 
+    "type": "property", 
+    "name": "fallback (@counter-style)"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/filter", 
+    "documented": true, 
+    "type": "property", 
+    "name": "filter"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/:first", 
+    "documented": true, 
+    "type": "pseudo-element", 
+    "name": ":first"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/:first-child", 
+    "documented": true, 
+    "type": "pseudo-element", 
+    "name": ":first-child"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/::first-letter", 
+    "documented": true, 
+    "type": "pseudo-element", 
+    "name": "::first-letter (:first-letter)"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/::first-line", 
+    "documented": true, 
+    "type": "pseudo-element", 
+    "name": "::first-line (:first-line)"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/:first-of-type", 
+    "documented": true, 
+    "type": "pseudo-element", 
+    "name": ":first-of-type"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/fit-content", 
+    "documented": true, 
+    "type": "function", 
+    "name": "fit-content()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/flex", 
+    "documented": true, 
+    "type": "unit", 
+    "name": "<flex>"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/flex-basis", 
+    "documented": true, 
+    "type": "property", 
+    "name": "flex-basis"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/flex-direction", 
+    "documented": true, 
+    "type": "property", 
+    "name": "flex-direction"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/flex-flow", 
+    "documented": true, 
+    "type": "property", 
+    "name": "flex-flow"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/flex-grow", 
+    "documented": true, 
+    "type": "property", 
+    "name": "flex-grow"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/flex-shrink", 
+    "documented": true, 
+    "type": "property", 
+    "name": "flex-shrink"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/flex-wrap", 
+    "documented": true, 
+    "type": "property", 
+    "name": "flex-wrap"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/float", 
+    "documented": true, 
+    "type": "property", 
+    "name": "float"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/:focus", 
+    "documented": true, 
+    "type": "pseudo-element", 
+    "name": ":focus"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/font", 
+    "documented": true, 
+    "type": "property", 
+    "name": "font"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@font-face", 
+    "documented": true, 
+    "type": "at-rule", 
+    "name": "@font-face"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/font-family", 
+    "documented": true, 
+    "type": "property", 
+    "name": "font-family"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@font-face/font-family", 
+    "documented": true, 
+    "type": "property", 
+    "name": "font-family (@font-face)"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/font-feature-settings", 
+    "documented": true, 
+    "type": "property", 
+    "name": "font-feature-settings"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@font-face/font-feature-settings", 
+    "documented": true, 
+    "type": "property", 
+    "name": "font-feature-settings (@font-face)"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@font-feature-values", 
+    "documented": true, 
+    "type": "at-rule", 
+    "name": "@font-feature-values"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/font-kerning", 
+    "documented": true, 
+    "type": "property", 
+    "name": "font-kerning"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/font-language-override", 
+    "documented": true, 
+    "type": "property", 
+    "name": "font-language-override"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/font-size", 
+    "documented": true, 
+    "type": "property", 
+    "name": "font-size"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/font-size-adjust", 
+    "documented": true, 
+    "type": "property", 
+    "name": "font-size-adjust"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/font-stretch", 
+    "documented": true, 
+    "type": "property", 
+    "name": "font-stretch"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@font-face/font-stretch", 
+    "documented": true, 
+    "type": "property", 
+    "name": "font-stretch (@font-face)"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/font-style", 
+    "documented": true, 
+    "type": "property", 
+    "name": "font-style"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@font-face/font-style", 
+    "documented": true, 
+    "type": "property", 
+    "name": "font-style (@font-face)"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/font-synthesis", 
+    "documented": true, 
+    "type": "property", 
+    "name": "font-synthesis"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/font-variant", 
+    "documented": true, 
+    "type": "property", 
+    "name": "font-variant"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@font-face/font-variant", 
+    "documented": true, 
+    "type": "property", 
+    "name": "font-variant (@font-face)"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/font-variant-alternates", 
+    "documented": true, 
+    "type": "property", 
+    "name": "font-variant-alternates"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/font-variant-caps", 
+    "documented": true, 
+    "type": "property", 
+    "name": "font-variant-caps"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/font-variant-east-asian", 
+    "documented": true, 
+    "type": "property", 
+    "name": "font-variant-east-asian"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/font-variant-ligatures", 
+    "documented": true, 
+    "type": "property", 
+    "name": "font-variant-ligatures"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/font-variant-numeric", 
+    "documented": true, 
+    "type": "property", 
+    "name": "font-variant-numeric"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/font-variant-position", 
+    "documented": true, 
+    "type": "property", 
+    "name": "font-variant-position"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/font-weight", 
+    "documented": true, 
+    "type": "property", 
+    "name": "font-weight"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@font-face/font-weight", 
+    "documented": true, 
+    "type": "property", 
+    "name": "font-weight (@font-face)"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@font-face/src#format()", 
+    "documented": true, 
+    "type": "function", 
+    "name": "format()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@font-face/format()", 
+    "documented": true, 
+    "type": "property", 
+    "name": "format() (@font-face)"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/length#fr", 
+    "documented": true, 
+    "type": "property", 
+    "name": "fr"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/frequency", 
+    "documented": true, 
+    "type": "unit", 
+    "name": "<frequency>"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/:fullscreen", 
+    "documented": true, 
+    "type": "pseudo-element", 
+    "name": ":fullscreen"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/angle#grad", 
+    "documented": true, 
+    "type": "property", 
+    "name": "grad"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/gradient", 
+    "documented": true, 
+    "type": "unit", 
+    "name": "<gradient>"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/filter#grayscale()", 
+    "documented": true, 
+    "type": "function", 
+    "name": "grayscale()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/grid", 
+    "documented": true, 
+    "type": "property", 
+    "name": "grid"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/grid-area", 
+    "documented": true, 
+    "type": "property", 
+    "name": "grid-area"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/grid-auto-columns", 
+    "documented": true, 
+    "type": "property", 
+    "name": "grid-auto-columns"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/grid-auto-flow", 
+    "documented": true, 
+    "type": "property", 
+    "name": "grid-auto-flow"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/grid-auto-rows", 
+    "documented": true, 
+    "type": "property", 
+    "name": "grid-auto-rows"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/grid-column", 
+    "documented": true, 
+    "type": "property", 
+    "name": "grid-column"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/grid-column-end", 
+    "documented": true, 
+    "type": "property", 
+    "name": "grid-column-end"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/grid-column-gap", 
+    "documented": true, 
+    "type": "property", 
+    "name": "grid-column-gap"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/grid-column-start", 
+    "documented": true, 
+    "type": "property", 
+    "name": "grid-column-start"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/grid-gap", 
+    "documented": true, 
+    "type": "property", 
+    "name": "grid-gap"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/grid-row", 
+    "documented": true, 
+    "type": "property", 
+    "name": "grid-row"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/grid-row-end", 
+    "documented": true, 
+    "type": "property", 
+    "name": "grid-row-end"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/grid-row-gap", 
+    "documented": true, 
+    "type": "property", 
+    "name": "grid-row-gap"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/grid-row-start", 
+    "documented": true, 
+    "type": "property", 
+    "name": "grid-row-start"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/grid-template", 
+    "documented": true, 
+    "type": "property", 
+    "name": "grid-template"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/grid-template-areas", 
+    "documented": true, 
+    "type": "property", 
+    "name": "grid-template-areas"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/grid-template-columns", 
+    "documented": true, 
+    "type": "property", 
+    "name": "grid-template-columns"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/grid-template-rows", 
+    "documented": true, 
+    "type": "property", 
+    "name": "grid-template-rows"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/height", 
+    "documented": true, 
+    "type": "property", 
+    "name": "height"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@viewport/height", 
+    "documented": true, 
+    "type": "property", 
+    "name": "height (@viewport)"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@historical-forms", 
+    "documented": true, 
+    "type": "at-rule", 
+    "name": "@historical-forms"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/:hover", 
+    "documented": true, 
+    "type": "pseudo-element", 
+    "name": ":hover"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/color_value#hsl()", 
+    "documented": true, 
+    "type": "function", 
+    "name": "hsl()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/color_value#hsla()", 
+    "documented": true, 
+    "type": "function", 
+    "name": "hsla()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/filter#hue-rotate()", 
+    "documented": true, 
+    "type": "function", 
+    "name": "hue-rotate()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/hyphens", 
+    "documented": true, 
+    "type": "property", 
+    "name": "hyphens"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/frequency#hz", 
+    "documented": true, 
+    "type": "property", 
+    "name": "hz"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/ident", 
+    "documented": true, 
+    "type": "unit", 
+    "name": "<ident>"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/image", 
+    "documented": true, 
+    "type": "unit", 
+    "name": "<image>"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/image#The_image()_functional_notation", 
+    "documented": true, 
+    "type": "function", 
+    "name": "image()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/image-orientation", 
+    "documented": true, 
+    "type": "property", 
+    "name": "image-orientation"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/image-rendering", 
+    "documented": true, 
+    "type": "property", 
+    "name": "image-rendering"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/image-resolution", 
+    "documented": true, 
+    "type": "property", 
+    "name": "image-resolution"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/image-set", 
+    "documented": true, 
+    "type": "function", 
+    "name": "image-set()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/ime-mode", 
+    "documented": true, 
+    "type": "property", 
+    "name": "ime-mode"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@import", 
+    "documented": true, 
+    "type": "at-rule", 
+    "name": "@import"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/length#in", 
+    "documented": true, 
+    "type": "property", 
+    "name": "in"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/:in-range", 
+    "documented": true, 
+    "type": "pseudo-element", 
+    "name": ":in-range"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/:indeterminate", 
+    "documented": true, 
+    "type": "pseudo-element", 
+    "name": ":indeterminate"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/inherit", 
+    "documented": true, 
+    "type": "property", 
+    "name": "inherit"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/initial", 
+    "documented": true, 
+    "type": "property", 
+    "name": "initial"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/inline-size", 
+    "documented": true, 
+    "type": "property", 
+    "name": "inline-size"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/inset", 
+    "documented": true, 
+    "type": "function", 
+    "name": "inset()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/integer", 
+    "documented": true, 
+    "type": "unit", 
+    "name": "<integer>"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/:invalid", 
+    "documented": true, 
+    "type": "pseudo-element", 
+    "name": ":invalid"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/filter#invert()", 
+    "documented": true, 
+    "type": "function", 
+    "name": "invert()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/isolation", 
+    "documented": true, 
+    "type": "property", 
+    "name": "isolation"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/justify-content", 
+    "documented": true, 
+    "type": "property", 
+    "name": "justify-content"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@keyframes", 
+    "documented": true, 
+    "type": "at-rule", 
+    "name": "@keyframes"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/frequency#khz", 
+    "documented": true, 
+    "type": "property", 
+    "name": "khz"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/:lang", 
+    "documented": true, 
+    "type": "pseudo-element", 
+    "name": ":lang"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/:last-child", 
+    "documented": true, 
+    "type": "pseudo-element", 
+    "name": ":last-child"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/:last-of-type", 
+    "documented": true, 
+    "type": "pseudo-element", 
+    "name": ":last-of-type"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/leader", 
+    "documented": true, 
+    "type": "function", 
+    "name": "leader()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/:left", 
+    "documented": true, 
+    "type": "pseudo-element", 
+    "name": ":left"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/left", 
+    "documented": true, 
+    "type": "property", 
+    "name": "left"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@left-bottom", 
+    "documented": true, 
+    "type": "at-rule", 
+    "name": "@left-bottom"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@left-middle", 
+    "documented": true, 
+    "type": "at-rule", 
+    "name": "@left-middle"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@left-top", 
+    "documented": true, 
+    "type": "at-rule", 
+    "name": "@left-top"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/length", 
+    "documented": true, 
+    "type": "unit", 
+    "name": "<length>"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/letter-spacing", 
+    "documented": true, 
+    "type": "property", 
+    "name": "letter-spacing"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/line-break", 
+    "documented": true, 
+    "type": "property", 
+    "name": "line-break"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/line-height", 
+    "documented": true, 
+    "type": "property", 
+    "name": "line-height"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/linear-gradient", 
+    "documented": true, 
+    "type": "function", 
+    "name": "linear-gradient()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/:link", 
+    "documented": true, 
+    "type": "pseudo-element", 
+    "name": ":link"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/list-style", 
+    "documented": true, 
+    "type": "property", 
+    "name": "list-style"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/list-style-image", 
+    "documented": true, 
+    "type": "property", 
+    "name": "list-style-image"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/list-style-position", 
+    "documented": true, 
+    "type": "property", 
+    "name": "list-style-position"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/list-style-type", 
+    "documented": true, 
+    "type": "property", 
+    "name": "list-style-type"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@font-face/src#local()", 
+    "documented": true, 
+    "type": "function", 
+    "name": "local()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/margin", 
+    "documented": true, 
+    "type": "property", 
+    "name": "margin"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/margin-block-end", 
+    "documented": true, 
+    "type": "property", 
+    "name": "margin-block-end"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/margin-block-start", 
+    "documented": true, 
+    "type": "property", 
+    "name": "margin-block-start"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/margin-bottom", 
+    "documented": true, 
+    "type": "property", 
+    "name": "margin-bottom"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/margin-inline-end", 
+    "documented": true, 
+    "type": "property", 
+    "name": "margin-inline-end"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/margin-inline-start", 
+    "documented": true, 
+    "type": "property", 
+    "name": "margin-inline-start"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/margin-left", 
+    "documented": true, 
+    "type": "property", 
+    "name": "margin-left"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/margin-right", 
+    "documented": true, 
+    "type": "property", 
+    "name": "margin-right"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/margin-top", 
+    "documented": true, 
+    "type": "property", 
+    "name": "margin-top"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/mask", 
+    "documented": true, 
+    "type": "property", 
+    "name": "mask"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/mask-clip", 
+    "documented": true, 
+    "type": "property", 
+    "name": "mask-clip"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/mask-composite", 
+    "documented": true, 
+    "type": "property", 
+    "name": "mask-composite"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/mask-image", 
+    "documented": true, 
+    "type": "property", 
+    "name": "mask-image"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/mask-mode", 
+    "documented": true, 
+    "type": "property", 
+    "name": "mask-mode"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/mask-origin", 
+    "documented": true, 
+    "type": "property", 
+    "name": "mask-origin"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/mask-position", 
+    "documented": true, 
+    "type": "property", 
+    "name": "mask-position"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/mask-repeat", 
+    "documented": true, 
+    "type": "property", 
+    "name": "mask-repeat"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/mask-size", 
+    "documented": true, 
+    "type": "property", 
+    "name": "mask-size"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/mask-type", 
+    "documented": true, 
+    "type": "property", 
+    "name": "mask-type"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/transform-function#matrix()", 
+    "documented": true, 
+    "type": "function", 
+    "name": "matrix()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/transform-function#matrix3d()", 
+    "documented": true, 
+    "type": "function", 
+    "name": "matrix3d()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/max-block-size", 
+    "documented": true, 
+    "type": "property", 
+    "name": "max-block-size"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/max-height", 
+    "documented": true, 
+    "type": "property", 
+    "name": "max-height"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@viewport/max-height", 
+    "documented": true, 
+    "type": "property", 
+    "name": "max-height (@viewport)"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/max-inline-size", 
+    "documented": true, 
+    "type": "property", 
+    "name": "max-inline-size"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/max-width", 
+    "documented": true, 
+    "type": "property", 
+    "name": "max-width"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@viewport/max-width", 
+    "documented": true, 
+    "type": "property", 
+    "name": "max-width (@viewport)"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@viewport/max-zoom", 
+    "documented": true, 
+    "type": "property", 
+    "name": "max-zoom (@viewport)"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@media", 
+    "documented": true, 
+    "type": "at-rule", 
+    "name": "@media"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/min-block-size", 
+    "documented": true, 
+    "type": "property", 
+    "name": "min-block-size"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/min-height", 
+    "documented": true, 
+    "type": "property", 
+    "name": "min-height"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@viewport/min-height", 
+    "documented": true, 
+    "type": "property", 
+    "name": "min-height (@viewport)"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/min-inline-size", 
+    "documented": true, 
+    "type": "property", 
+    "name": "min-inline-size"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/min-width", 
+    "documented": true, 
+    "type": "property", 
+    "name": "min-width"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@viewport/min-width", 
+    "documented": true, 
+    "type": "property", 
+    "name": "min-width (@viewport)"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@viewport/min-zoom", 
+    "documented": true, 
+    "type": "property", 
+    "name": "min-zoom (@viewport)"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/minmax", 
+    "documented": true, 
+    "type": "function", 
+    "name": "minmax()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/mix-blend-mode", 
+    "documented": true, 
+    "type": "property", 
+    "name": "mix-blend-mode"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/length#mm", 
+    "documented": true, 
+    "type": "property", 
+    "name": "mm"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/time#ms", 
+    "documented": true, 
+    "type": "property", 
+    "name": "ms"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@namespace", 
+    "documented": true, 
+    "type": "at-rule", 
+    "name": "@namespace"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@counter-style/negative", 
+    "documented": true, 
+    "type": "property", 
+    "name": "negative (@counter-style)"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/:not", 
+    "documented": true, 
+    "type": "pseudo-element", 
+    "name": ":not"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/:nth-child", 
+    "documented": true, 
+    "type": "pseudo-element", 
+    "name": ":nth-child"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/:nth-last-child", 
+    "documented": true, 
+    "type": "pseudo-element", 
+    "name": ":nth-last-child"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/:nth-last-of-type", 
+    "documented": true, 
+    "type": "pseudo-element", 
+    "name": ":nth-last-of-type"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/:nth-of-type", 
+    "documented": true, 
+    "type": "pseudo-element", 
+    "name": ":nth-of-type"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/number", 
+    "documented": true, 
+    "type": "unit", 
+    "name": "<number>"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/object-fit", 
+    "documented": true, 
+    "type": "property", 
+    "name": "object-fit"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/object-position", 
+    "documented": true, 
+    "type": "property", 
+    "name": "object-position"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/offset-block-end", 
+    "documented": true, 
+    "type": "property", 
+    "name": "offset-block-end"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/offset-block-start", 
+    "documented": true, 
+    "type": "property", 
+    "name": "offset-block-start"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/offset-inline-end", 
+    "documented": true, 
+    "type": "property", 
+    "name": "offset-inline-end"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/offset-inline-start", 
+    "documented": true, 
+    "type": "property", 
+    "name": "offset-inline-start"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/:only-child", 
+    "documented": true, 
+    "type": "pseudo-element", 
+    "name": ":only-child"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/:only-of-type", 
+    "documented": true, 
+    "type": "pseudo-element", 
+    "name": ":only-of-type"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/opacity", 
+    "documented": true, 
+    "type": "property", 
+    "name": "opacity"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/filter#opacity()", 
+    "documented": true, 
+    "type": "function", 
+    "name": "opacity()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/:optional", 
+    "documented": true, 
+    "type": "pseudo-element", 
+    "name": ":optional"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/order", 
+    "documented": true, 
+    "type": "property", 
+    "name": "order"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@viewport/orientation", 
+    "documented": true, 
+    "type": "property", 
+    "name": "orientation (@viewport)"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@ornaments", 
+    "documented": true, 
+    "type": "at-rule", 
+    "name": "@ornaments"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@font-face/font-variant#ornaments()", 
+    "documented": true, 
+    "type": "function", 
+    "name": "ornaments()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/orphans", 
+    "documented": true, 
+    "type": "property", 
+    "name": "orphans"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/:out-of-range", 
+    "documented": true, 
+    "type": "pseudo-element", 
+    "name": ":out-of-range"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/outline", 
+    "documented": true, 
+    "type": "property", 
+    "name": "outline"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/outline-color", 
+    "documented": true, 
+    "type": "property", 
+    "name": "outline-color"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/outline-offset", 
+    "documented": true, 
+    "type": "property", 
+    "name": "outline-offset"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/outline-style", 
+    "documented": true, 
+    "type": "property", 
+    "name": "outline-style"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/outline-width", 
+    "documented": true, 
+    "type": "property", 
+    "name": "outline-width"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/overflow", 
+    "documented": true, 
+    "type": "property", 
+    "name": "overflow"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/overflow-wrap", 
+    "documented": true, 
+    "type": "property", 
+    "name": "overflow-wrap"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/overflow-x", 
+    "documented": true, 
+    "type": "property", 
+    "name": "overflow-x"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/overflow-y", 
+    "documented": true, 
+    "type": "property", 
+    "name": "overflow-y"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@counter-style/pad", 
+    "documented": true, 
+    "type": "property", 
+    "name": "pad (@counter-style)"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/padding", 
+    "documented": true, 
+    "type": "property", 
+    "name": "padding"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/padding-block-end", 
+    "documented": true, 
+    "type": "property", 
+    "name": "padding-block-end"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/padding-block-start", 
+    "documented": true, 
+    "type": "property", 
+    "name": "padding-block-start"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/padding-bottom", 
+    "documented": true, 
+    "type": "property", 
+    "name": "padding-bottom"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/padding-inline-end", 
+    "documented": true, 
+    "type": "property", 
+    "name": "padding-inline-end"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/padding-inline-start", 
+    "documented": true, 
+    "type": "property", 
+    "name": "padding-inline-start"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/padding-left", 
+    "documented": true, 
+    "type": "property", 
+    "name": "padding-left"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/padding-right", 
+    "documented": true, 
+    "type": "property", 
+    "name": "padding-right"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/padding-top", 
+    "documented": true, 
+    "type": "property", 
+    "name": "padding-top"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@page", 
+    "documented": true, 
+    "type": "at-rule", 
+    "name": "@page"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/page-break-after", 
+    "documented": true, 
+    "type": "property", 
+    "name": "page-break-after"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/page-break-before", 
+    "documented": true, 
+    "type": "property", 
+    "name": "page-break-before"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/page-break-inside", 
+    "documented": true, 
+    "type": "property", 
+    "name": "page-break-inside"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/length#pc", 
+    "documented": true, 
+    "type": "property", 
+    "name": "pc"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/percentage", 
+    "documented": true, 
+    "type": "unit", 
+    "name": "<percentage>"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/perspective", 
+    "documented": true, 
+    "type": "property", 
+    "name": "perspective"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/transform-function#perspective()", 
+    "documented": true, 
+    "type": "function", 
+    "name": "perspective()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/perspective-origin", 
+    "documented": true, 
+    "type": "property", 
+    "name": "perspective-origin"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/pointer-events", 
+    "documented": true, 
+    "type": "property", 
+    "name": "pointer-events"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/polygon", 
+    "documented": true, 
+    "type": "function", 
+    "name": "polygon()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/position_value", 
+    "documented": true, 
+    "type": "unit", 
+    "name": "<position>"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/position", 
+    "documented": true, 
+    "type": "property", 
+    "name": "position"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@counter-style/prefix", 
+    "documented": true, 
+    "type": "property", 
+    "name": "prefix (@counter-style)"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/length#pt", 
+    "documented": true, 
+    "type": "property", 
+    "name": "pt"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/length#px", 
+    "documented": true, 
+    "type": "property", 
+    "name": "px"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/length#q", 
+    "documented": true, 
+    "type": "property", 
+    "name": "q"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/quotes", 
+    "documented": true, 
+    "type": "property", 
+    "name": "quotes"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/angle#rad", 
+    "documented": true, 
+    "type": "property", 
+    "name": "rad"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/radial-gradient", 
+    "documented": true, 
+    "type": "function", 
+    "name": "radial-gradient()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@counter-style/range", 
+    "documented": true, 
+    "type": "property", 
+    "name": "range (@counter-style)"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/ratio", 
+    "documented": true, 
+    "type": "unit", 
+    "name": "<ratio>"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/:read-only", 
+    "documented": true, 
+    "type": "pseudo-element", 
+    "name": ":read-only"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/:read-write", 
+    "documented": true, 
+    "type": "pseudo-element", 
+    "name": ":read-write"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/rect", 
+    "documented": true, 
+    "type": "function", 
+    "name": "rect()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/length#rem", 
+    "documented": true, 
+    "type": "property", 
+    "name": "rem"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/repeat", 
+    "documented": true, 
+    "type": "function", 
+    "name": "repeat()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/repeating-linear-gradient", 
+    "documented": true, 
+    "type": "function", 
+    "name": "repeating-linear-gradient()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/repeating-radial-gradient", 
+    "documented": true, 
+    "type": "function", 
+    "name": "repeating-radial-gradient()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/:required", 
+    "documented": true, 
+    "type": "pseudo-element", 
+    "name": ":required"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/resize", 
+    "documented": true, 
+    "type": "property", 
+    "name": "resize"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/resolution", 
+    "documented": true, 
+    "type": "unit", 
+    "name": "<resolution>"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/revert", 
+    "documented": true, 
+    "type": "property", 
+    "name": "revert"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/color_value#rgb()", 
+    "documented": true, 
+    "type": "function", 
+    "name": "rgb()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/color_value#rgba()", 
+    "documented": true, 
+    "type": "function", 
+    "name": "rgba()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/:right", 
+    "documented": true, 
+    "type": "pseudo-element", 
+    "name": ":right"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/right", 
+    "documented": true, 
+    "type": "property", 
+    "name": "right"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@right-bottom", 
+    "documented": true, 
+    "type": "at-rule", 
+    "name": "@right-bottom"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@right-middle", 
+    "documented": true, 
+    "type": "at-rule", 
+    "name": "@right-middle"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@right-top", 
+    "documented": true, 
+    "type": "at-rule", 
+    "name": "@right-top"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/:root", 
+    "documented": true, 
+    "type": "pseudo-element", 
+    "name": ":root"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/transform-function#rotate()", 
+    "documented": true, 
+    "type": "function", 
+    "name": "rotate()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/transform-function#rotate3d()", 
+    "documented": true, 
+    "type": "function", 
+    "name": "rotate3d()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/transform-function#rotateX()", 
+    "documented": true, 
+    "type": "function", 
+    "name": "rotateX()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/transform-function#rotateY()", 
+    "documented": true, 
+    "type": "function", 
+    "name": "rotateY()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/transform-function#rotateZ()", 
+    "documented": true, 
+    "type": "function", 
+    "name": "rotateZ()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/ruby-align", 
+    "documented": true, 
+    "type": "property", 
+    "name": "ruby-align"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/ruby-merge", 
+    "documented": true, 
+    "type": "property", 
+    "name": "ruby-merge"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/ruby-position", 
+    "documented": true, 
+    "type": "property", 
+    "name": "ruby-position"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/time#s", 
+    "documented": true, 
+    "type": "property", 
+    "name": "s"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/filter#saturate()", 
+    "documented": true, 
+    "type": "function", 
+    "name": "saturate()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/transform-function#scale()", 
+    "documented": true, 
+    "type": "function", 
+    "name": "scale()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/transform-function#scale3d()", 
+    "documented": true, 
+    "type": "function", 
+    "name": "scale3d()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/transform-function#scaleX()", 
+    "documented": true, 
+    "type": "function", 
+    "name": "scaleX()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/transform-function#scaleY()", 
+    "documented": true, 
+    "type": "function", 
+    "name": "scaleY()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/transform-function#scaleZ()", 
+    "documented": true, 
+    "type": "function", 
+    "name": "scaleZ()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/:scope", 
+    "documented": true, 
+    "type": "pseudo-element", 
+    "name": ":scope"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/scroll-behavior", 
+    "documented": true, 
+    "type": "property", 
+    "name": "scroll-behavior"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/scroll-snap-coordinate", 
+    "documented": true, 
+    "type": "property", 
+    "name": "scroll-snap-coordinate"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/scroll-snap-destination", 
+    "documented": true, 
+    "type": "property", 
+    "name": "scroll-snap-destination"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/scroll-snap-type", 
+    "documented": true, 
+    "type": "property", 
+    "name": "scroll-snap-type"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/::selection", 
+    "documented": true, 
+    "type": "pseudo-element", 
+    "name": "::selection"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/filter#sepia()", 
+    "documented": true, 
+    "type": "function", 
+    "name": "sepia()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/shape", 
+    "documented": true, 
+    "type": "unit", 
+    "name": "<shape>"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/shape-image-threshold", 
+    "documented": true, 
+    "type": "property", 
+    "name": "shape-image-threshold"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/shape-margin", 
+    "documented": true, 
+    "type": "property", 
+    "name": "shape-margin"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/shape-outside", 
+    "documented": true, 
+    "type": "property", 
+    "name": "shape-outside"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/transform-function#skew()", 
+    "documented": true, 
+    "type": "function", 
+    "name": "skew()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/transform-function#skewX()", 
+    "documented": true, 
+    "type": "function", 
+    "name": "skewX()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/transform-function#skewY()", 
+    "documented": true, 
+    "type": "function", 
+    "name": "skewY()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@counter-style/speak-as", 
+    "documented": true, 
+    "type": "property", 
+    "name": "speak-as (@counter-style)"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@font-face/src", 
+    "documented": true, 
+    "type": "property", 
+    "name": "src (@font-face)"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/steps", 
+    "documented": true, 
+    "type": "function", 
+    "name": "steps()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/string", 
+    "documented": true, 
+    "type": "unit", 
+    "name": "<string>"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@styleset", 
+    "documented": true, 
+    "type": "at-rule", 
+    "name": "@styleset"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@font-face/font-variant#styleset()", 
+    "documented": true, 
+    "type": "function", 
+    "name": "styleset()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@stylistic", 
+    "documented": true, 
+    "type": "at-rule", 
+    "name": "@stylistic"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@font-face/font-variant#stylistic()", 
+    "documented": true, 
+    "type": "function", 
+    "name": "stylistic()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@counter-style/suffix", 
+    "documented": true, 
+    "type": "property", 
+    "name": "suffix (@counter-style)"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@supports", 
+    "documented": true, 
+    "type": "at-rule", 
+    "name": "@supports"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@swash", 
+    "documented": true, 
+    "type": "at-rule", 
+    "name": "@swash"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@font-face/font-variant#swash()", 
+    "documented": true, 
+    "type": "function", 
+    "name": "swash()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@counter-style/symbols", 
+    "documented": true, 
+    "type": "property", 
+    "name": "symbols (@counter-style)"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/symbols", 
+    "documented": true, 
+    "type": "function", 
+    "name": "symbols()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@counter-style/system", 
+    "documented": true, 
+    "type": "property", 
+    "name": "system (@counter-style)"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/tab-size", 
+    "documented": true, 
+    "type": "property", 
+    "name": "tab-size"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/table-layout", 
+    "documented": true, 
+    "type": "property", 
+    "name": "table-layout"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/:target", 
+    "documented": true, 
+    "type": "pseudo-element", 
+    "name": ":target"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/target-counter", 
+    "documented": true, 
+    "type": "function", 
+    "name": "target-counter()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/target-counters", 
+    "documented": true, 
+    "type": "function", 
+    "name": "target-counters()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/target-text", 
+    "documented": true, 
+    "type": "function", 
+    "name": "target-text()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/text-align", 
+    "documented": true, 
+    "type": "property", 
+    "name": "text-align"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/text-align-last", 
+    "documented": true, 
+    "type": "property", 
+    "name": "text-align-last"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/text-combine-upright", 
+    "documented": true, 
+    "type": "property", 
+    "name": "text-combine-upright"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/text-decoration", 
+    "documented": true, 
+    "type": "property", 
+    "name": "text-decoration"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/text-decoration-color", 
+    "documented": true, 
+    "type": "property", 
+    "name": "text-decoration-color"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/text-decoration-line", 
+    "documented": true, 
+    "type": "property", 
+    "name": "text-decoration-line"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/text-decoration-style", 
+    "documented": true, 
+    "type": "property", 
+    "name": "text-decoration-style"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/text-emphasis", 
+    "documented": true, 
+    "type": "property", 
+    "name": "text-emphasis"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/text-emphasis-color", 
+    "documented": true, 
+    "type": "property", 
+    "name": "text-emphasis-color"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/text-emphasis-position", 
+    "documented": true, 
+    "type": "property", 
+    "name": "text-emphasis-position"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/text-emphasis-style", 
+    "documented": true, 
+    "type": "property", 
+    "name": "text-emphasis-style"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/text-indent", 
+    "documented": true, 
+    "type": "property", 
+    "name": "text-indent"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/text-orientation", 
+    "documented": true, 
+    "type": "property", 
+    "name": "text-orientation"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/text-overflow", 
+    "documented": true, 
+    "type": "property", 
+    "name": "text-overflow"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/text-rendering", 
+    "documented": true, 
+    "type": "property", 
+    "name": "text-rendering"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/text-shadow", 
+    "documented": true, 
+    "type": "property", 
+    "name": "text-shadow"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/text-transform", 
+    "documented": true, 
+    "type": "property", 
+    "name": "text-transform"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/text-underline-position", 
+    "documented": true, 
+    "type": "property", 
+    "name": "text-underline-position"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/time", 
+    "documented": true, 
+    "type": "unit", 
+    "name": "<time>"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/timing-function", 
+    "documented": true, 
+    "type": "unit", 
+    "name": "<timing-function>"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/top", 
+    "documented": true, 
+    "type": "property", 
+    "name": "top"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@top-center", 
+    "documented": true, 
+    "type": "at-rule", 
+    "name": "@top-center"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@top-left", 
+    "documented": true, 
+    "type": "at-rule", 
+    "name": "@top-left"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@top-left-corner", 
+    "documented": true, 
+    "type": "at-rule", 
+    "name": "@top-left-corner"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@top-right", 
+    "documented": true, 
+    "type": "at-rule", 
+    "name": "@top-right"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@top-right-corner", 
+    "documented": true, 
+    "type": "at-rule", 
+    "name": "@top-right-corner"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/touch-action", 
+    "documented": true, 
+    "type": "property", 
+    "name": "touch-action"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/transform", 
+    "documented": true, 
+    "type": "property", 
+    "name": "transform"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/transform-box", 
+    "documented": true, 
+    "type": "property", 
+    "name": "transform-box"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/transform-function", 
+    "documented": true, 
+    "type": "unit", 
+    "name": "<transform-function>"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/transform-origin", 
+    "documented": true, 
+    "type": "property", 
+    "name": "transform-origin"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/transform-style", 
+    "documented": true, 
+    "type": "property", 
+    "name": "transform-style"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/transition", 
+    "documented": true, 
+    "type": "property", 
+    "name": "transition"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/transition-delay", 
+    "documented": true, 
+    "type": "property", 
+    "name": "transition-delay"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/transition-duration", 
+    "documented": true, 
+    "type": "property", 
+    "name": "transition-duration"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/transition-property", 
+    "documented": true, 
+    "type": "property", 
+    "name": "transition-property"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/transition-timing-function", 
+    "documented": true, 
+    "type": "property", 
+    "name": "transition-timing-function"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/transform-function#translate()", 
+    "documented": true, 
+    "type": "function", 
+    "name": "translate()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/transform-function#translate3d()", 
+    "documented": true, 
+    "type": "function", 
+    "name": "translate3d()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/transform-function#translateX()", 
+    "documented": true, 
+    "type": "function", 
+    "name": "translateX()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/transform-function#translateY()", 
+    "documented": true, 
+    "type": "function", 
+    "name": "translateY()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/transform-function#translateZ()", 
+    "documented": true, 
+    "type": "function", 
+    "name": "translateZ()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/angle#turn", 
+    "documented": true, 
+    "type": "property", 
+    "name": "turn"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/unicode-bidi", 
+    "documented": true, 
+    "type": "property", 
+    "name": "unicode-bidi"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@font-face/unicode-range", 
+    "documented": true, 
+    "type": "property", 
+    "name": "unicode-range (@font-face)"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/:unresolved", 
+    "documented": true, 
+    "type": "pseudo-element", 
+    "name": ":unresolved"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/unset", 
+    "documented": true, 
+    "type": "property", 
+    "name": "unset"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/url", 
+    "documented": true, 
+    "type": "unit", 
+    "name": "<url>"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/url#The_url()_functional_notation", 
+    "documented": true, 
+    "type": "function", 
+    "name": "url()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@viewport/user-zoom", 
+    "documented": true, 
+    "type": "property", 
+    "name": "user-zoom (@viewport)"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/:valid", 
+    "documented": true, 
+    "type": "pseudo-element", 
+    "name": ":valid"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/var", 
+    "documented": true, 
+    "type": "function", 
+    "name": "var()"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/vertical-align", 
+    "documented": true, 
+    "type": "property", 
+    "name": "vertical-align"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/length#vh", 
+    "documented": true, 
+    "type": "property", 
+    "name": "vh"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@viewport", 
+    "documented": true, 
+    "type": "at-rule", 
+    "name": "@viewport"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/visibility", 
+    "documented": true, 
+    "type": "property", 
+    "name": "visibility"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/:visited", 
+    "documented": true, 
+    "type": "pseudo-element", 
+    "name": ":visited"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/length#vmax", 
+    "documented": true, 
+    "type": "property", 
+    "name": "vmax"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/length#vmin", 
+    "documented": true, 
+    "type": "property", 
+    "name": "vmin"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/length#vw", 
+    "documented": true, 
+    "type": "property", 
+    "name": "vw"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/white-space", 
+    "documented": true, 
+    "type": "property", 
+    "name": "white-space"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/widows", 
+    "documented": true, 
+    "type": "property", 
+    "name": "widows"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/width", 
+    "documented": true, 
+    "type": "property", 
+    "name": "width"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@viewport/width", 
+    "documented": true, 
+    "type": "property", 
+    "name": "width (@viewport)"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/will-change", 
+    "documented": true, 
+    "type": "property", 
+    "name": "will-change"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/word-break", 
+    "documented": true, 
+    "type": "property", 
+    "name": "word-break"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/word-spacing", 
+    "documented": true, 
+    "type": "property", 
+    "name": "word-spacing"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/word-wrap", 
+    "documented": true, 
+    "type": "property", 
+    "name": "word-wrap"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/writing-mode", 
+    "documented": true, 
+    "type": "property", 
+    "name": "writing-mode"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/z-index", 
+    "documented": true, 
+    "type": "property", 
+    "name": "z-index"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/@viewport/zoom", 
+    "documented": true, 
+    "type": "property", 
+    "name": "zoom (@viewport)"
+  }, 
+  {
+    "url": "/en-US/docs/Web/CSS/--*", 
+    "documented": true, 
+    "type": "property", 
+    "name": "--*"
+  }
+]
