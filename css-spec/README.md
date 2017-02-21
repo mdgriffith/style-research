@@ -9,6 +9,7 @@ Types of questions we want to ask:
     * Exception for shorthand properties
   * Property Compatibility
     * What prefixes are required?
+  * A General Measure of Complexity per Property
 
 
 

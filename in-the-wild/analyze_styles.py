@@ -6,6 +6,11 @@ import colorsys
 import itertools
 import pprint
 import hashlib
+import tinycss
+import os.path
+import time
+import pdb
+from bs4 import BeautifulSoup
 
 retrieval_script = None
 with open("analyze-style.js") as ANALYZE:
@@ -14,7 +19,23 @@ with open("analyze-style.js") as ANALYZE:
 
 def retrieve(browser, url):
     browser.get(url)
+    time.sleep(5)
     elements = browser.execute_script(retrieval_script)
+    ## Show console.log messages
+    # for entry in browser.get_log('browser'):
+        # print(entry)
+
+    for sheet in elements["external_stylesheets"]:
+        pprint.pprint(sheet)
+        browser.get(sheet)
+        stylesheet = browser.page_source
+        if bool(BeautifulSoup(stylesheet, "html.parser").find()):
+            html = BeautifulSoup(stylesheet, "html.parser").find("pre")
+            style_sheet = html.get_text()
+
+
+        elements["stylesheet"] = elements["stylesheet"] + "\n\n" + stylesheet
+
     return {"site":url, "elements":elements}
 
 
@@ -45,6 +66,9 @@ def value_variance(pair1, pair2):
 class StyleSet(object):
 
     def __init__(self, name, elements=None, props=None, named_styles=None):
+        """
+        :elements: - [{ "style": List {prop:value} }]
+        """
         self.name = name
         if named_styles is None:
             named_styles = {}
@@ -452,12 +476,6 @@ def is_display_inline_meaningful(elements):
 
 
 
-position = ["position", "left", "right", "top", "bottom", "float"]
-layout = ["display"]
-color = ["color", "background-color", "border-color"]
-basic = ["border-width", "padding", "font-family", "font-weight", "opacity", "text-align"]
-
-
 def indent(stri):
     return "  " + str(stri)
 
@@ -622,53 +640,314 @@ position_named_styles = {
 # A style group is mobile if all species have this same distribution
 
 
+def save(filename, data):
+    with open('data/{filename}.json'.format(filename=filename), 'w') as RESULTS:
+        print("saving data, {filename}".format(filename=filename))
+        RESULTS.write(json.dumps(data, indent=2))
+
+
+def load(filename):
+    file_to_load = 'data/{filename}.json'.format(filename=filename)
+    if os.path.isfile(file_to_load):
+        with open(file_to_load) as RESULTS:
+            try:
+                print("loading data")
+                return json.loads(RESULTS.read())
+            except ValueError, e:
+                print("Failed to load {e}".format(e =str(e)))
+                return None
+    else:
+        return None
+
+
+
+def retrieve_sites(sites):
+    browser = webdriver.Chrome()
+    results = []
+    for site in sites:
+        results.append(retrieve(browser, site))
+    browser.quit()
+    return results
+        
+def analyze_css(retrieved_data):
+    """
+
+    Parses CSS.
+
+    Does the following analysis:
+
+    Stylesheets
+    
+        * Style Definition Count
+        * Number of True color models
+            * Number of variants
+        * Number of Layout Models
+        * Number of Position Models
+        * Number of Font Models
+
+
+    Computed Styles
+        * How are styles combined
+            * id + class + inline
+        * Meaningful position:static usage
+        * 
+
+    New Formation
+        * How many classes/what size would they be if there was only one class per style.
+        * Some handle on cognitive load?  Something to do with:
+            * Number of StyleClasses
+            * Size of Style Classes
+                * Maybe diversity of properties within
+        * Could these "one style" classes be reduced by taking out common parts as a mixin?
+
+
+
+    """
+    results = []
+    parser = tinycss.make_parser("page3", "fonts3")
+    for site in retrieved_data:
+        metrics = {}
+        metrics["site"] = site["site"]
+        css = parser.parse_stylesheet(site["elements"]["stylesheet"])
+        # pdb.set_trace()
+ 
+        ## Process styles into a standardized form.
+        styles = []
+        for parsed_style in css.rules:
+
+            style = {}
+            if hasattr(parsed_style, "selector"):
+                # pdb.set_trace()
+                style["selector"] = parsed_style.selector.as_css()
+                # print(parsed_style.selector.as_css())
+
+
+            # style.column, line, selector
+            if hasattr(parsed_style, "declarations"):
+                style["props"] = {}
+                for prop in parsed_style.declarations:
+                    # prop.column, line, name, priority, value
+                    # prop.value append as_css column count extend index insert line pop remove reverse sort'
+                    style["props"][prop.name] = prop.value.as_css()
+
+                style["props"] = remove_prefixed(style["props"])
+                style["tags"] = tag_counts(style["props"])
+
+            styles.append(style)
+
+        ## The Distribution of how many properties are in each style.
+        style_definition_sizes = {} # size: count
+        for style in styles:
+            if "props" in style:
+                size = len(style["props"].keys())
+                # if size == 2:
+                #     pprint.pprint(style["tags"])
+                if size in style_definition_sizes:
+                    style_definition_sizes[size] = style_definition_sizes[size] + 1
+                else:
+                    style_definition_sizes[size] = 1
+        metrics["size_distribution"] = style_definition_sizes
+
+
+        ## Counts of what property names show up with others
+        # {prop: {otherprop: count}}
+        coproperty_frequency = {}
+        for style in styles:
+            if "props" in style:
+                property_names = style["props"].keys()
+                number_of_keys = len(property_names)
+                lonely = True
+                if number_of_keys > 1:
+                    lonely = False
+                for name in property_names:
+                    if name in coproperty_frequency:
+                        coproperty_frequency[name][0] = coproperty_frequency[name][0] + 1
+                        if lonely:
+                            coproperty_frequency[name][2] = coproperty_frequency[name][2] + 1
+                    else:
+                        if lonely:
+                            coproperty_frequency[name] = [1, {}, 1]
+                        else:
+                            coproperty_frequency[name] = [1, {}, 0]
+ 
+
+                    
+                    for other in property_names:
+                        if name == other:
+                            continue
+                       
+                        if other in coproperty_frequency[name][1]:
+                            coproperty_frequency[name][1][other] = coproperty_frequency[name][1][other] + 1
+                        else:
+                            coproperty_frequency[name][1][other] = 1
+                        
+        # Give the top associated property for every property found
+        # [(association, self_count, lonely_count, prop, top_associated_prop)]
+        colocated = []
+        for prop, counts in coproperty_frequency.items():
+            self_count = counts[0]
+            lonely = counts[2]
+            top_prop = sorted(counts[1].items(), key=lambda tup: tup[1], reverse=True)
+
+            association = 0
+            if len(top_prop) < 1:
+                top_prop = None
+                association
+            else:
+                top_prop = top_prop[0]
+                association = top_prop[1] / self_count
+
+            colocated.append((association, self_count, lonely, prop, top_prop))
+
+        colocated = sorted(colocated, key=lambda tup: tup[0])
+
+        metrics["colocated_properties"] = colocated
+
+
+        ####################
+        # Actual Node Styles (Via Computed Styles)
+        ####################
+        # pprint.pprint(site["elements"]["computed_styles"][:1])
+
+
+
+
+        results.append(metrics)
+    return results
+
+
+
+position = ["position", "left", "right", "top", "bottom", "float"]
+layout = ["display"]
+color = ["color", "background-color", "border-color"]
+basic = ["border-width", "padding", "font-family", "font-weight", "opacity", "text-align"]
+
+
+# the prefix 'sw-' means "starts with"
+tags = {
+     "position": ["position", "left", "right", "top", "bottom", "float"]
+   , "layout": ["display", "sw-flex"]
+   , "color": ["color", "background-color", "border-color"]
+   , "box": ["sw-padding", "sw-margin", "width", "height", "max-width", "min-width","max-height", "min-height" ]
+   , "font": ["sw-font"]
+   , "border": ["sw-border"]
+}
+
+def tag_counts(props):
+    tags = {}
+    for name, val in props.items():
+        tag = tag_property(name)
+        if tag in tags:
+            tags[tag] = tags[tag] + 1
+        else:
+            tags[tag] = 1
+    return tags
+
+
+def tag_property(name):
+    tag = "misc"
+    for tag, checks in tags.items():
+        for check in checks:
+            if check.startswith("sw-") and name.startswith(check[3:]):
+                return tag
+            elif name == check:
+                return tag
+    return tag
+
+
+
+
+# Style Definition -----
+# style = {name:val}
+
+prefixes = ["-webkit-", "-moz-", "-o-", "-ms-"]
+
+def unprefix(name):
+    for prefix in prefixes:
+        if name.startswith(prefix):
+            return name[len(prefix):]
+    return name
+
+def remove_prefixed(style):
+    """
+    This method loses information.  
+    If a property is present in prefixed and unprefixed form, the last one mentioned will be kept
+    """
+    new_style = {}
+    for name, val in style.items():
+        new_style[unprefix(name)] = val
+    return new_style
+
+
+
+
 if __name__ == "__main__":
     sites = []
     with open("sites") as SITES:
         sites = [s for s in SITES.read().split("\n") if s != "" and not s.startswith("#")]
 
-    browser = webdriver.Chrome()
-    results = []
-    for site in sites:
 
-        analysis = StyleAnalysis(site)
+    sites = sites[1:2]
+    # Stylesheet is joing into one big stylesheet
+    retrieved = load("raw-site-data")
+    if not retrieved:
+        retrieved = retrieve_sites(sites)
+        save("raw-site-data", retrieved)
 
-        # analysis = {"site":site}
-        data = retrieve(browser, site)
+    print("retrieved, analyzing")
+    analyzed = analyze_css(retrieved)
+    # pprint.pprint(analyzed)
 
+    # parse css
+    # css analysis
+
+
+
+    # browser = webdriver.Chrome()
+    # results = []
+    # for site in sites:
+
+    #     # analysis = StyleAnalysis(site)
+
+    #     # analysis = {"site":site}
+    #     data = retrieve(browser, site)
+
+    #     # pprint.pprint(data)
+    #     save(data, "example")
+    #     break
         # correlation = AggregateCorrelation(data["elements"])
 
-        print site
+        
 
-        all_styles = StyleSet("All Styles", elements=data["elements"], props="all")
+        # all_styles = StyleSet("All Styles", elements=data["elements"], props="all")
 
-        # freq = all_styles.frequency_of_prop()
-        # pprint.pprint(freq)
+        # # freq = all_styles.frequency_of_prop()
+        # # pprint.pprint(freq)
+        # # print ""
+        # # print ""
+
+        # style_count = all_styles.species_count_brief()
+        # print "all"
+        # print style_count
+        # print len(style_count)
+        # print ""
+
+
+        # position_styles = StyleSet("position_species", elements=data["elements"], props=position, named_styles=position_named_styles)
+        # style_count = position_styles.species_count()
+        # print "position"
+        # pprint.pprint(style_count)
+        # print len(style_count)
+        # print ""
+
+
+        # all_but_position_styles = StyleSet("all_but_position_species", elements=data["elements"], props=("remove", position))
+        # style_count = all_but_position_styles.species_count_brief()
+        # print "all but position"
+        # print style_count
+        # print len(style_count)
         # print ""
         # print ""
-
-        style_count = all_styles.species_count_brief()
-        print "all"
-        print style_count
-        print len(style_count)
-        print ""
-
-
-        position_styles = StyleSet("position_species", elements=data["elements"], props=position, named_styles=position_named_styles)
-        style_count = position_styles.species_count()
-        print "position"
-        pprint.pprint(style_count)
-        print len(style_count)
-        print ""
-
-
-        all_but_position_styles = StyleSet("all_but_position_species", elements=data["elements"], props=("remove", position))
-        style_count = all_but_position_styles.species_count_brief()
-        print "all but position"
-        print style_count
-        print len(style_count)
-        print ""
-        print ""
 
 
 
@@ -749,10 +1028,10 @@ if __name__ == "__main__":
         # analysis["meaningful_static_count"] =  is_display_static_meaningful(data["elements"])
         # analysis["font_sizes"] = font_palette(data["elements"])
         # analysis["meaningful_inline_count"] = is_display_inline_meaningful(data["elements"])
-        results.append(analysis)
+        # results.append(analysis)
        
 
 
     # with open('data/results-species.json', 'w') as RESULTS:
     #     RESULTS.write(json.dumps([r.items for r in results], indent=2))
-    browser.quit()
+    
