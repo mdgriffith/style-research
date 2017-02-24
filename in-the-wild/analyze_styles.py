@@ -10,6 +10,7 @@ import tinycss
 import os.path
 import time
 import pdb
+import block
 from bs4 import BeautifulSoup
 
 retrieval_script = None
@@ -20,13 +21,15 @@ with open("analyze-style.js") as ANALYZE:
 def retrieve(browser, url):
     browser.get(url)
     time.sleep(5)
+    parent_html = browser.execute_script("return document.getElementsByTagName('body')[0].innerHTML")
     elements = browser.execute_script(retrieval_script)
+    
+    
     ## Show console.log messages
     # for entry in browser.get_log('browser'):
         # print(entry)
 
     for sheet in elements["external_stylesheets"]:
-        pprint.pprint(sheet)
         browser.get(sheet)
         stylesheet = browser.page_source
         if bool(BeautifulSoup(stylesheet, "html.parser").find()):
@@ -36,7 +39,7 @@ def retrieve(browser, url):
 
         elements["stylesheet"] = elements["stylesheet"] + "\n\n" + stylesheet
 
-    return {"site":url, "elements":elements}
+    return {"site":url, "elements":elements, "html": parent_html}
 
 
 def parent(element):
@@ -513,42 +516,6 @@ def largest_factor(elements, all_props):
 
 
 
-# def match(style, species):
-#     all_match = True
-#     for spec_prop, spec_val in species:
-#         matching = False
-#         for prop, val in style.items():
-#             if spec_prop == prop and spec_val == val:
-#                 matching = True
-#                 break
-#         if not matching:
-#             return False
-
-
-# def count_both_match(elements, p1, p2):
-#     count = 0
-#     for el in elements:
-#         if match(el["style"], p1 + p2):
-#             count = count + 1
-#     return count
-
-# # For a given group, how many other groups is it seen with and how often
-# def mobility_factor(elements, all_props):
-
-#     counts = []
-#     for i, p1 in enumerate(all_props):
-#         for j, p2 in enumerate(all_props):
-#             if i == j:
-#                 continue
-#             species1 = get_species(elements, props=p1)
-#             species2 = get_species(elements, props=p2)
-
-#             counts.append(count_both_match(elements, species1, species2))
-#     return counts
-
-
-
-
 
 position_named_styles = {
       frozenset([(u'right', u'auto'),
@@ -661,6 +628,9 @@ def load(filename):
 
 
 
+
+
+
 def retrieve_sites(sites):
     browser = webdriver.Chrome()
     results = []
@@ -668,7 +638,321 @@ def retrieve_sites(sites):
         results.append(retrieve(browser, site))
     browser.quit()
     return results
+
+
+def merge_style(style_list):
+    merged = {"props":{}, "tags":{}}
+    for style in style_list:
+        merged["props"].update(style["props"])
+        for tag, count in style["tags"].items():
+            if tag in merged["tags"]:
+                merged["tags"][tag] = merged["tags"][tag] + count
+            else:
+                merged["tags"][tag] = count
+    return merged
+
+def match_styles(stylesheet, html):
+    
+
+    metrics = {}
+    soup = BeautifulSoup(html, "html.parser")
+    print("Beginning to Tag elements")
+    for i, el in enumerate(soup.find_all()):
+        el["researchid"] = i
+
+
+    print("Beginning Style/Node Search")
+    nodes = {}
+    # nodes => {researchid: [{selector:x, props:{name:val}, tags:{tag:count}}] }
+    dead_styles = 0
+    total_count = len(stylesheet)
+    used_styles = []
+    for i, style in enumerate(stylesheet):
+        if "selector" in style:
+            if style["selector"] == "*":
+                continue
+            try:
+                found = soup.select(style["selector"])
+                if found:
+                    if len(found) > 0:
+                        used_styles.append(style)
+                    else:
+                        dead_styles = dead_styles + 1
+                    for found_node in found:
+                        if "style" in found_node:
+                            print(found_node["style"])
+
+                        if found_node["researchid"] in nodes:
+                            nodes[found_node["researchid"]].append(style)
+                        else:
+                            nodes[found_node["researchid"]] = [ style]
+                else:
+                    dead_styles = dead_styles + 1
+            except IndexError:
+                dead_styles = dead_styles + 1
+                continue
+
+    block.say("Used Styles Cognitive Load")
+    metrics["cognitive_load"] = cognitive_load(used_styles)
+    metrics["dead_styles"] = dead_styles
+    metrics["total_styles"] = total_count
+    metrics["used_styles"] = len(used_styles)
+    print("dead styles: {count}/{total} -> {used}".format(count=dead_styles, total=total_count, used=metrics["used_styles"]))
+    print("finished searching for nodes")
+
+    # single_style => { frozen({name:val}) : node_count }
+    single_styles = {}
+    for found_styles in nodes.values():
+        full_style = {}
+        for style in found_styles:
+            full_style.update(style["props"])
+
+        frozen_style = frozenset(full_style.items())
+        if frozen_style in single_styles:
+            single_styles[frozen_style] = single_styles[frozen_style] + 1
+        else:
+            single_styles[frozen_style] = 1
+
+    print("finished combining")
+    # organized => [ { "node_counts":int, "props":{name:val}, "tags": {"tag":count} } ]
+    organized = []
+    for frozen, count in single_styles.items():
+        style = {"node_counts": count, "props":{}}
+        for prop, val in list(frozen):
+            style["props"][prop] = val
+
+        style["tags"] = tag_counts(style["props"])
+        organized.append(style)
+
+    metrics["single_style_count"] = len(organized)
+    print("single style count: {count}".format(count=metrics["single_style_count"]))
+
+    # # most frequent (property ++ value)
+    # property_value_count = {}
+    # for style in organized:
         
+    #     for key, value in style["props"].items():
+    #         k_v = key + value
+
+    #         if k_v in property_value_count:
+    #             property_value_count[k_v] = property_value_count[k_v] + 1
+    #         else:
+    #             property_value_count[k_v] = 1
+
+    # pprint.pprint(sorted(property_value_count.items(), key=lambda tup: tup[1], reverse=True))
+
+
+    # # {num_tags: num_styles}
+    # summarized = {}
+    # for style in organized:
+    #     num_tags = len(style["tags"].keys())
+
+    #     if num_tags in summarized:
+    #         summarized[num_tags] = summarized[num_tags] + 1
+    #     else:
+    #         summarized[num_tags] = 1
+
+    # pprint.pprint(summarized)
+
+    # ## {num_props: num_styles}
+    # # summarized = {}
+    # # for style in organized:
+    # #     num_props = len(style["props"].keys())
+
+    # #     if num_props in summarized:
+    # #         summarized[num_props] = summarized[num_props] + 1
+    # #     else:
+    # #         summarized[num_props] = 1
+
+    # # pprint.pprint(summarized)
+
+
+    return { "styles": organized, "metrics": metrics }
+
+
+def cognitive_load(styles):
+    """
+    In this case we're defining cognitive load as a metric that combines the following in some way.
+      * Number of css classes
+      * Size of css classes
+      * Complexity of CSS classes (how many categories there are)
+    """
+    metrics = {}
+    metrics["num_classes"] = len(styles)
+
+    sizes = []
+    tags = []
+    for style in styles:
+        sizes.append(len(style["props"]))
+        tags.append(len(style["tags"]))
+        # [ { "node_counts":int, "props":{name:val}, "tags": {"tag":count} } ]
+
+    metrics["avg_size"] = sum(sizes) / float(len(sizes))
+    metrics["avg_complexity"] = sum(tags) / float(len(tags))
+    metrics["cognitive_load"] = metrics["num_classes"] * metrics["avg_complexity"]
+    block.indent()
+    block.pretty(metrics)
+    block.dedent()
+    return metrics
+
+
+def common_values(style1, style2, min_common, min_remaining):
+    if len(style1.keys()) < min_common + min_remaining:
+        return None
+
+    if len(style2.keys()) < min_common + min_remaining:
+        return None
+
+
+    common_props = {}
+    for prop, val in style1.items():
+        if prop in style2 and style2[prop] == val:
+            common_props[prop] = val
+
+    if len(common_props) >= min_common:
+        return common_props
+
+    return None
+
+
+
+def extract_variations(styles):
+    """
+    Variations are small styles that capture the differences between styles that are almost the same.
+
+    Find styles that are 1,2, or 3 properties off, while still having properties of their own(min 3?).
+
+    Desired Result:
+       A list of variations and how many classes they could be used by.
+
+    """
+    variations = set([])
+    
+    for i, base_style in enumerate(styles):
+        for j, other_style in enumerate(styles):
+            if i == j:
+                continue
+
+            if i > len(styles)/2:
+                continue
+
+            common = common_values(base_style["props"], other_style["props"], 2, 3)
+
+            if common:
+                variations.add(frozenset(common.items()))
+
+   
+    deduped = []
+    for vary in list(variations):
+        count = 0
+        vary_props = dict(list(vary))
+        for s in styles:
+            if match_variation(s["props"], vary_props):
+                count = count + 1
+
+        if count > 4:
+            deduped.append({"props":vary_props, "count":count})
+
+
+
+
+    # block.pretty(sorted(deduped, key=lambda k: k['count'], reverse=True) )
+
+
+
+    new_styles = []
+    for i, base_style in enumerate(styles):
+        reduced = remove_variations(base_style, deduped)
+        if reduced:
+            new_styles.append(reduced)
+
+    block.indent()
+    block.say("Vartiaions: {v}".format(v=len(deduped)))
+    block.dedent()
+
+    final_style = new_styles + deduped
+
+    for style in final_style:
+        style["tags"] = tag_counts(style["props"])
+    return final_style
+
+
+
+def match_variation(style, var):
+    present = True
+    for p, v in var.items():
+        if p in style and style[p] == v:
+            present = True
+        else:
+            return False
+    return present
+
+def remove_variations(style, variations):
+    for v in variations:
+        style["props"] = remove_v(style["props"], v["props"])
+    return style
+
+def remove_v(style, var):
+    present = True
+    for p, v in var.items():
+        if p in style and style[p] == v:
+            present = True
+        else:
+            return style
+
+    for p in var.keys():
+        del style[p]
+
+    return style
+
+
+
+def separate_layout_position(styles):
+
+    separated_styles = []
+    for style in styles:
+
+        new_style = {}
+        new_pos = {}
+        new_layout = {}
+        for prop, val in style["props"].items():
+            tag = tag_property(prop)
+            if tag == "position":
+                new_pos[prop] = val
+            elif tag == "layout":
+                new_layout[prop] = val
+            else:
+                new_style[prop] = val
+
+        if new_style:
+            separated_styles.append(new_style)
+
+        if new_layout:
+            separated_styles.append(new_layout)
+
+        if new_pos:
+            separated_styles.append(new_pos)
+
+    frozen = list(set([ frozenset(s.items()) for s in separated_styles ]))
+
+    separate_styles = []
+    for froze in frozen:
+        props = {}
+        for prop, val in list(froze):
+            props[prop] = val
+
+        tags = tag_counts(props)
+        separate_styles.append({"props":props, "tags": tags})
+
+    return separate_styles
+
+
+
+
+
+
+
+
 def analyze_css(retrieved_data):
     """
 
@@ -707,9 +991,9 @@ def analyze_css(retrieved_data):
     parser = tinycss.make_parser("page3", "fonts3")
     for site in retrieved_data:
         metrics = {}
+        print("analyzying {site}".format(site = site["site"]))
         metrics["site"] = site["site"]
         css = parser.parse_stylesheet(site["elements"]["stylesheet"])
-        # pdb.set_trace()
  
         ## Process styles into a standardized form.
         styles = []
@@ -720,7 +1004,6 @@ def analyze_css(retrieved_data):
                 # pdb.set_trace()
                 style["selector"] = parsed_style.selector.as_css()
                 # print(parsed_style.selector.as_css())
-
 
             # style.column, line, selector
             if hasattr(parsed_style, "declarations"):
@@ -749,59 +1032,60 @@ def analyze_css(retrieved_data):
         metrics["size_distribution"] = style_definition_sizes
 
 
-        ## Counts of what property names show up with others
-        # {prop: {otherprop: count}}
-        coproperty_frequency = {}
-        for style in styles:
-            if "props" in style:
-                property_names = style["props"].keys()
-                number_of_keys = len(property_names)
-                lonely = True
-                if number_of_keys > 1:
-                    lonely = False
-                for name in property_names:
-                    if name in coproperty_frequency:
-                        coproperty_frequency[name][0] = coproperty_frequency[name][0] + 1
-                        if lonely:
-                            coproperty_frequency[name][2] = coproperty_frequency[name][2] + 1
-                    else:
-                        if lonely:
-                            coproperty_frequency[name] = [1, {}, 1]
-                        else:
-                            coproperty_frequency[name] = [1, {}, 0]
+        # ## Counts of what property names show up with others
+        # # {prop: {otherprop: count}}
+        # coproperty_frequency = {}
+        # for style in styles:
+        #     if "props" in style:
+        #         property_names = style["props"].keys()
+        #         number_of_keys = len(property_names)
+        #         lonely = True
+        #         if number_of_keys > 1:
+        #             lonely = False
+        #         for name in property_names:
+        #             if name in coproperty_frequency:
+        #                 coproperty_frequency[name][0] = coproperty_frequency[name][0] + 1
+        #                 if lonely:
+        #                     coproperty_frequency[name][2] = coproperty_frequency[name][2] + 1
+        #             else:
+        #                 if lonely:
+        #                     coproperty_frequency[name] = [1, {}, 1]
+        #                 else:
+        #                     coproperty_frequency[name] = [1, {}, 0]
  
 
                     
-                    for other in property_names:
-                        if name == other:
-                            continue
+        #             for other in property_names:
+        #                 if name == other:
+        #                     continue
                        
-                        if other in coproperty_frequency[name][1]:
-                            coproperty_frequency[name][1][other] = coproperty_frequency[name][1][other] + 1
-                        else:
-                            coproperty_frequency[name][1][other] = 1
+        #                 if other in coproperty_frequency[name][1]:
+        #                     coproperty_frequency[name][1][other] = coproperty_frequency[name][1][other] + 1
+        #                 else:
+        #                     coproperty_frequency[name][1][other] = 1
                         
-        # Give the top associated property for every property found
-        # [(association, self_count, lonely_count, prop, top_associated_prop)]
-        colocated = []
-        for prop, counts in coproperty_frequency.items():
-            self_count = counts[0]
-            lonely = counts[2]
-            top_prop = sorted(counts[1].items(), key=lambda tup: tup[1], reverse=True)
+        # # KEEEEP
+        # # Give the top associated property for every property found
+        # # [(association, self_count, lonely_count, prop, top_associated_prop)]
+        # colocated = []
+        # for prop, counts in coproperty_frequency.items():
+        #     self_count = counts[0]
+        #     lonely = counts[2]
+        #     top_prop = sorted(counts[1].items(), key=lambda tup: tup[1], reverse=True)
 
-            association = 0
-            if len(top_prop) < 1:
-                top_prop = None
-                association
-            else:
-                top_prop = top_prop[0]
-                association = top_prop[1] / self_count
+        #     association = 0
+        #     if len(top_prop) < 1:
+        #         top_prop = None
+        #         association
+        #     else:
+        #         top_prop = top_prop[0]
+        #         association = top_prop[1] / self_count
 
-            colocated.append((association, self_count, lonely, prop, top_prop))
+        #     colocated.append((association, self_count, lonely, prop, top_prop))
 
-        colocated = sorted(colocated, key=lambda tup: tup[0])
+        # colocated = sorted(colocated, key=lambda tup: tup[0])
 
-        metrics["colocated_properties"] = colocated
+        # metrics["colocated_properties"] = colocated
 
 
         ####################
@@ -809,6 +1093,38 @@ def analyze_css(retrieved_data):
         ####################
         # pprint.pprint(site["elements"]["computed_styles"][:1])
 
+        matched = match_styles(styles, site["html"])
+        metrics["single_styles"] = matched["styles"]
+        metrics["style_processing_metrics"] = matched["metrics"]
+        block.say("Single Styles Cognitive Load")
+        metrics["cognitive_load"] = cognitive_load(matched["styles"])
+        # pprint.pprint(matched)
+
+
+        most_common_tags = {}
+        for style in metrics["single_styles"]:
+            for tag in style["tags"].keys():
+                if tag in most_common_tags:
+                    most_common_tags[tag] = most_common_tags[tag] + 1
+                else:
+                    most_common_tags[tag] = 1
+        metrics["most_common_tags"] = most_common_tags
+
+        separated = separate_layout_position(matched["styles"])
+        # metrics["separated_styles"] = separated
+        block.say("Separated Styles Cognitive Load")
+        metrics["cognitive_load_separated"] = cognitive_load(separated)
+
+        with_variations = extract_variations(separated)
+        metrics["variations"] = with_variations
+        block.say("Extracted Variations Cognitive Load")
+        metrics["cognitive_load_variations"] = cognitive_load(with_variations)
+
+        
+
+        # pprint.pprint(with_variations[:10])
+        # print("found variations")
+        # print(len(with_variations))
 
 
 
@@ -825,12 +1141,14 @@ basic = ["border-width", "padding", "font-family", "font-weight", "opacity", "te
 
 # the prefix 'sw-' means "starts with"
 tags = {
-     "position": ["position", "left", "right", "top", "bottom", "float"]
-   , "layout": ["display", "sw-flex"]
+     "position": ["position", "left", "right", "top", "bottom", "float", "align-self", "flex-basis", "order", "flex-grow", "flex-shrink", "vertical-align", "transform"]
+   , "layout": ["display", "flex", "flex-direction", "justify-content", "align-items", "flex-wrap"]
    , "color": ["color", "background-color", "border-color"]
-   , "box": ["sw-padding", "sw-margin", "width", "height", "max-width", "min-width","max-height", "min-height" ]
-   , "font": ["sw-font"]
+   , "box": ["sw-padding", "sw-margin", "width", "height", "max-width", "min-width","max-height", "min-height", "box-sizing"]
+   , "font": ["sw-font", "text-overflow", "sw-text", "line-height", "whitespace"]
    , "border": ["sw-border"]
+   , "visibility": ["opacity", "overflow", "visibility"]
+   , "background": ["background-image", "background-size", "background-position", "background-repeat"]
 }
 
 def tag_counts(props):
@@ -845,14 +1163,13 @@ def tag_counts(props):
 
 
 def tag_property(name):
-    tag = "misc"
     for tag, checks in tags.items():
         for check in checks:
             if check.startswith("sw-") and name.startswith(check[3:]):
                 return tag
             elif name == check:
                 return tag
-    return tag
+    return "misc"
 
 
 
@@ -860,7 +1177,7 @@ def tag_property(name):
 # Style Definition -----
 # style = {name:val}
 
-prefixes = ["-webkit-", "-moz-", "-o-", "-ms-"]
+prefixes = ["-webkit-", "-moz-", "-o-", "-ms-", "-khtml-"]
 
 def unprefix(name):
     for prefix in prefixes:
@@ -887,15 +1204,22 @@ if __name__ == "__main__":
         sites = [s for s in SITES.read().split("\n") if s != "" and not s.startswith("#")]
 
 
-    sites = sites[1:2]
-    # Stylesheet is joing into one big stylesheet
-    retrieved = load("raw-site-data")
-    if not retrieved:
-        retrieved = retrieve_sites(sites)
-        save("raw-site-data", retrieved)
+    # # sites = sites[0:1]
+    # # Stylesheet is joing into one big stylesheet
+    # # retrieved = load("raw-site-data")
+    # # if not retrieved:
+    retrieved = retrieve_sites(sites)
+    #     # save("raw-site-data", retrieved)
 
     print("retrieved, analyzing")
+    # analyzed = load("single-styles")
+    # if not analyzed:
     analyzed = analyze_css(retrieved)
+    save("single-styles", analyzed)
+
+
+
+
     # pprint.pprint(analyzed)
 
     # parse css

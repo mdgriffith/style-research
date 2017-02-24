@@ -151,14 +151,14 @@ function getNodes(node, parents){
 
 
 var data = {}
-var body = document.getElementsByTagName("body")[0];
-var bodyStyle = getComputedStyles(body);
-bodyStyle["level"] = [0];
-var styles = [bodyStyle];
-styles = styles.concat(childData(body, [0]));
+// var body = document.getElementsByTagName("body")[0];
+// var bodyStyle = getComputedStyles(body);
+// bodyStyle["level"] = [0];
+// var styles = [bodyStyle];
+// styles = styles.concat(childData(body, [0]));
 
-data["computed_styles"] = styles
-data["nodes"] = getNodes(document.getElementsByTagName("body")[0]);
+// data["computed_styles"] = styles
+// data["nodes"] = getNodes(document.getElementsByTagName("body")[0]);
 data["stylesheet"] = getStyleSheets();
 
 data["external_stylesheets"] = getStylesheetNames();
